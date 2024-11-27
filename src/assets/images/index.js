@@ -1,6 +1,6 @@
-import meta from "./meta.png";
-import shopify from "./shopify.png";
-import starbucks from "./starbucks.png";
-import tesla from "./tesla.png";
+import ShoppingPlatform from './ShoppingPlatform.jpg'
+import TravelTracker from './TravelTracker.jpg'
+import UILibrary from './UILibrary.avif'
+import VideoConfrance from './VideoConfrance.jpg'
 
-export {  meta, shopify, starbucks, tesla };
+export { ShoppingPlatform, TravelTracker, UILibrary, VideoConfrance }

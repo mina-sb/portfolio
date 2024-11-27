@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,14 +10,14 @@
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
-body:has(.card[data-color="blue"]:hover) {
+body:has(.card[data-color='blue']:hover) {
   background-color: rgb(var(--blue-rgb) / 25%);
 }
 
-body:has(.card[data-color="green"]:hover) {
+body:has(.card[data-color='green']:hover) {
   background-color: rgb(var(--green-rgb) / 25%);
 }
 
@@ -26,13 +26,11 @@ body:has(.card[data-color="green"]:hover) {
     @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
   }
 
-  
-
-  .subhead-text {
-    @apply font-semibold sm:text-3xl text-xl relative;
+  .subhead2-text {
+    @apply border-b-2 border-[#C1A156] pb-2;
   }
 
-  .blue-gradient_text {
+  .gold-gradient-text {
     @apply bg-gradient-to-r from-[#f3bf47] to-[#C1A156] bg-clip-text text-transparent;
   }
 
@@ -73,7 +71,89 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .cta-text {
-    @apply  font-extrabold flex-1 text-3xl max-md:text-center;
+    @apply font-extrabold flex-1 text-3xl max-md:text-center;
+  }
+
+  .home-main-section {
+    @apply h-screen relative bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-700  to-slate-900;
+  }
+  .home-info-h1 {
+    @apply text-3xl md:text-5xl lg:text-6xl font-bold text-left py-20 md:py-6 px-8 -my-64 text-white mx-5 z-30;
+  }
+  .home-info-gold-subhead {
+    @apply block my-2 font-semibold md:font-bold text-2xl md:text-3xl md:mx-0 text-white;
+  }
+  .home-info-gold-span {
+    @apply font-bold mx-2;
+  }
+  .home-info-button {
+    @apply inline-block text-white text-lg md:text-xl mx-0 md:mx-2 my-2 md:my-4 bg-transparent hover:bg-slate-500  font-semibold hover:text-white py-2 px-4 border border-slate-500 hover:border-transparent rounded;
+  }
+  .subhead-text {
+    @apply text-xl sm:text-3xl font-semibold relative;
+  }
+  .main-section {
+    @apply h-screen relative overflow-hidden block z-10 before:bg-[url('../../public/images/sky-patternn.png')] before:bg-repeat	 before:content-['']  before:absolute before:inset-0 before:block  before:opacity-75 before:z-[-5] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-700  to-slate-900;
+  }
+  .about-p-container {
+    @apply mt-3 flex flex-col justify-start items-start lg:flex-row lg:items-end lg:justify-between gap-3 text-slate-200;
+  }
+  .about-skills-container {
+    @apply mt-6 flex flex-wrap gap-12 lg:justify-between;
+  }
+  .about-skill {
+    @apply block-container w-20 h-20;
+  }
+  .about-skill-front-btn {
+    @apply rounded-xl flex justify-center items-center cursor-pointer;
+  }
+  .about-skill-front-btn img {
+    @apply w-1/2 h-1/2 object-contain;
+  }
+  .about-skill-p {
+    @apply text-sm font-medium my-1 text-white text-center;
+  }
+  .projects-main-container {
+    @apply px-12 md:px-20 xl:px-36 mt-28;
+  }
+  .projects-container {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8 mt-10;
+  }
+  .project-container {
+    @apply flex items-start flex-1 flex-col sm:flex-row md:flex-col lg:flex-row gap-4;
+  }
+  .project-title {
+    @apply mb-2 text-base font-bold tracking-tight text-[#C1A156];
+  }
+  .project-desc {
+    @apply mb-3 font-normal text-gray-100 text-justify text-sm;
+  }
+  .project-btn {
+    @apply inline-flex items-center px-2 md:px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300;
+  }
+  .project-detail-container {
+    @apply mt-5 flex justify-start gap-3 items-start flex-col sm:flex-row;
+  }
+  .project-detail-img {
+    @apply rounded-lg w-full sm:w-60 mr-5;
+  }
+  .project-detail-techs-container {
+    @apply flex mt-2 w-60 flex-wrap gap-1 justify-start;
+  }
+  .project-detail-tech {
+    @apply p-1 border text-sm border-[#C1A156] rounded text-[#f3bf47];
+  }
+  .project-detail-desc-container {
+    @apply bg-slate-700 p-3 pb-1 rounded-lg justify-end;
+  }
+  .project-detail-desc {
+    @apply text-white list-disc font-light ml-5 text-justify text-sm;
+  }
+  .contact-main-container {
+    @apply max-w-5xl mx-auto sm:p-16 p-8 pb-12 mt-10 min-h-[calc(100vh-80px)];
+  }
+  .contact-info-container {
+    @apply flex gap-3 items-center justify-start;
   }
 }
 
@@ -88,7 +168,8 @@ body:has(.card[data-color="green"]:hover) {
 .logo {
   border-radius: 8.889px;
   background: #fff;
-  box-shadow: 0px 10px 35px -4px rgba(67, 83, 255, 0.15),
+  box-shadow:
+    0px 10px 35px -4px rgba(67, 83, 255, 0.15),
     0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
 }
 
@@ -169,13 +250,21 @@ body:has(.card[data-color="green"]:hover) {
   position: relative;
   border-radius: 10px;
   border: #2b77e7;
-  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+  box-shadow:
+    0.6vmin 0.6vmin #336cc1,
+    1vmin 1vmin #0092db,
+    1vmin 1vmin #0092db,
+    0.65vmin 1vmin #0092db,
+    1vmin 0.65vmin #0092db;
 }
 
 .neo-brutalism-white {
   background: #fff;
   border: #fff;
-  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
-    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+  box-shadow:
+    0.6vmin 0.6vmin #fff,
+    1vmin 1vmin #d2e4ff,
+    1vmin 1vmin #d2e4ff,
+    0.65vmin 1vmin #d2e4ff,
+    1vmin 0.65vmin #d2e4ff;
 }

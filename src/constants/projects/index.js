@@ -28,7 +28,7 @@ export const projectList = [
     id: 1,
     imageUrl: UILibrary,
     title: 'Fully Customizable UI Component Library',
-    desc: 'typescript',
+    desc: 'React-based component library with fully customizable properties',
     techs: ['React', 'Tailwind CSS', 'Storybook', 'TypeScript', 'Git', 'Jira'],
     projectDetails: [
       'Built a UI component library using React, based on designs provided in Figma.',
@@ -44,7 +44,7 @@ export const projectList = [
     title: 'TravelTracker Web Application',
     demo: 'https://mina-sb.github.io/placesFrontend/',
     video: 'https://drive.google.com/file/d/1OlBVp47gfKMKTf3qinE2stfTTcMLBG7L/view',
-    desc: 'Frontend',
+    desc: 'A MERN app for tracking travel locations with Google Maps.',
     techs: [
       'Google Maps API',
       'React',
@@ -70,7 +70,7 @@ export const projectList = [
   {
     id: 3,
     imageUrl: ShoppingPlatform,
-    title: 'E-commerce Shopping Platform',
+    title: 'A complete React-based platform with cart and wishlist features.',
     desc: 'Frontend',
     demo: 'https://mina-sb.github.io/handmade-ceramic-online-store/',
     video: 'https://drive.google.com/file/d/1XpNGypn_JCORn5dBxu4vYY58rUxj3xYx/view?usp=drive_link',

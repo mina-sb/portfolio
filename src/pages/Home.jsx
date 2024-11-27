@@ -54,7 +54,7 @@ const Home = () => {
   const snowScale = adjustSnowForScreenSize()
 
   return (
-    <section className="main-section">
+    <section className="home-main-section">
       <Canvas
         className={`w-full h-screen bg-transparent absolute   ${
           isRotating ? 'cursor-grabbing' : 'cursor-grab'

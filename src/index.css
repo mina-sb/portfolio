@@ -155,6 +155,18 @@ body:has(.card[data-color='green']:hover) {
   .contact-info-container {
     @apply flex gap-3 items-center justify-start;
   }
+  .navbar-logo-link {
+    @apply w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md;
+  }
+  .navbar-logo {
+    @apply font-bold text-xl gold-gradient-text;
+  }
+  .navbar-btn {
+    @apply inline-flex items-center p-2 w-10 h-10  justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200;
+  }
+  .navbar-side-menu {
+    @apply fixed bg-opacity-100 shadow-[rgba(0,0,5,0.1)_6px_5px_4px_0px] top-0 left-0 w-[60%] h-full md:hidden pl-16 pt-16 bg-slate-900 ease-in-out transition-transform duration-300;
+  }
 }
 
 .glassmorphism {

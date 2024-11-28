@@ -25,7 +25,7 @@ const ProjectDetail = () => {
                   <li>{item}</li>
                 ))}
               </ul>
-              <div className="flex justify-end mt-3">
+              <div className="flex justify-end mt-3 pb-2">
                 {projectList[id - 1].video ? (
                   <a href={projectList[id - 1].video} target="_blank" class="project-btn">
                     Watch demo Video
@@ -34,7 +34,7 @@ const ProjectDetail = () => {
                   ''
                 )}
                 {projectList[id - 1].demo ? (
-                  <a href={projectList[id - 1].demo} target="_blank" class="project-btn">
+                  <a href={projectList[id - 1].demo} target="_blank" class="project-btn ml-2">
                     Visit Site
                   </a>
                 ) : (

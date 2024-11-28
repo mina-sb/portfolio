@@ -43,7 +43,7 @@ const Contact = () => {
         <div className="relative flex md:flex-row flex-col pt-4">
           <div className="flex-1 min-w-[50%] flex flex-col">
             <hr />
-            <form ref={formRef} className="w-full flex flex-col gap-4 mt-1">
+            <form ref={formRef} className="w-full flex flex-col gap-2 mt-1">
               <input
                 type="text"
                 name="name"
@@ -71,7 +71,7 @@ const Contact = () => {
                 name="Message"
                 rows="4"
                 className="textarea outline-none"
-                placeholder="Write your thoughts here..."
+                placeholder="Write here..."
                 value={form.message}
                 onChange={handleChange}
                 onFocus={handleFocus}

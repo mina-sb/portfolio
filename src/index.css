@@ -143,6 +143,9 @@ body:has(.card[data-color='green']:hover) {
   .project-detail-tech {
     @apply p-1 border text-sm border-[#C1A156] rounded text-[#f3bf47];
   }
+  .project-detail-tech:hover {
+    @apply border-[#C1A156] rounded bg-[#C1A156] text-white cursor-pointer;
+  }
   .project-detail-desc-container {
     @apply bg-slate-700 p-3 pb-1 rounded-lg justify-end;
   }

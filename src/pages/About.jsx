@@ -16,7 +16,7 @@ const About = () => {
             focused on creating efficient and well-structured applications.
           </p>
           <a
-            href="https://mina-sb.github.io/handmade-ceramic-online-store/"
+            href="https://mina-sb.github.io/pdf-assets/Mina%20Sadeghbayan.pdf"
             target="_blank"
             class="flex items-center px-3 py-3 text-md font-medium text-center text-white bg-[#C1A156] rounded-lg hover:bg-[#f3bf47] focus:ring-4 focus:outline-none focus:ring-[#C1A156]"
           >

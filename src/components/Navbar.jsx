@@ -75,11 +75,20 @@ const Navbar = () => {
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            `${isActive ? 'gold-gradient-text' : 'text-white'} block mb-3 ont-bold`
+            `${isActive ? 'gold-gradient-text' : 'text-white'} block mb-3 font-bold`
           }
           onClick={toggleMenu}
         >
           About
+        </NavLink>
+        <NavLink
+          to="/experience"
+          className={({ isActive }) =>
+            `${isActive ? 'gold-gradient-text' : 'text-white'} block  mb-3  font-bold`
+          }
+          onClick={toggleMenu}
+        >
+          Experiences
         </NavLink>
         <NavLink
           to="/projects"
@@ -90,6 +99,7 @@ const Navbar = () => {
         >
           Projects
         </NavLink>
+
         <NavLink
           to="/contact"
           className={({ isActive }) =>
@@ -116,11 +126,18 @@ const Navbar = () => {
             About
           </NavLink>
           <NavLink
+            to="/experience"
+            className={({ isActive }) => (isActive ? 'gold-gradient-text font-bold' : 'text-white')}
+          >
+            Experience
+          </NavLink>
+          <NavLink
             to="/projects"
             className={({ isActive }) => (isActive ? 'gold-gradient-text font-bold' : 'text-white')}
           >
             Projects
           </NavLink>
+
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? 'gold-gradient-text font-bold' : 'text-white')}

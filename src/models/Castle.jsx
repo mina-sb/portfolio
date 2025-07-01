@@ -18,8 +18,6 @@ const Castle = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     setIsRotating(true)
 
     const clientX = event.touches ? event.touches[0].clientX : event.clientX
-
-    // Store the current clientX position for reference
     lastX.current = clientX
   }
 
@@ -63,7 +61,6 @@ const Castle = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   }
 
   useEffect(() => {
-    // Add event listeners for pointer and keyboard events
     const canvas = gl.domElement
     canvas.addEventListener('pointerdown', handlePointerDown)
     canvas.addEventListener('pointerup', handlePointerUp)
@@ -71,7 +68,6 @@ const Castle = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     window.addEventListener('keydown', handleKeyDown)
     window.addEventListener('keyup', handleKeyUp)
 
-    // Remove event listeners when component unmounts
     return () => {
       canvas.removeEventListener('pointerdown', handlePointerDown)
       canvas.removeEventListener('pointerup', handlePointerUp)
@@ -81,20 +77,16 @@ const Castle = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     }
   }, [gl, handlePointerDown, handlePointerUp, handlePointerMove])
 
-  // It's is called on each frame update
   useFrame(() => {
-    // If not rotating, apply damping to slow down the rotation (smoothly)
     if (!isRotating) {
       rotationSpeed.current *= dampingFactor
 
-      // Stop rotation when speed is very small
       if (Math.abs(rotationSpeed.current) < 0.001) {
         rotationSpeed.current = 0
       }
 
       islandRef.current.rotation.y += rotationSpeed.current
     } else {
-      // When rotating, determine the current stage based on island's orientation
       const rotation = islandRef.current.rotation.y
       const normalizedRotation = ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI)
 

@@ -54,17 +54,22 @@ const Home = () => {
   const snowScale = adjustSnowForScreenSize()
 
   return (
-    <section className="home-main-section">
+    <section className="home-main-section relative">
+      <div className="absolute top-20 md:bottom-6 md:top-auto left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-lg text-sm z-50 shadow-md backdrop-blur-md transition-opacity duration-500">
+        Click and drag to rotate the castle!
+      </div>
+
       <Canvas
-        className={`w-full h-screen bg-transparent absolute   ${
+        className={`w-full h-screen bg-transparent absolute ${
           isRotating ? 'cursor-grabbing' : 'cursor-grab'
         }`}
         camera={{ near: 0.1, far: 1000 }}
       >
-        <Suspense fallback={<Loader />}></Suspense>
+        <Suspense fallback={<Loader />} />
         <directionalLight position={[1, 5, 1]} intensity={3} />
         <ambientLight intensity={1} />
         <Snowflake scale={snowScale} />
+
         <Castle
           isRotating={isRotating}
           setIsRotating={setIsRotating}
@@ -73,11 +78,13 @@ const Home = () => {
           rotation={[0.1, 2, 0]}
           scale={castleScale}
         />
-        <NightSky isRotating={isRotating} />
+
+        <NightSky isRotating={true} />
         <Moon position={moonPosition} scale={moonScale} />
         <Crow screenSize={window.innerWidth > 768 ? 'md' : 'sm'} />
       </Canvas>
-      <div className="absolute">
+
+      <div className="absolute z-10">
         <HomeInfo currentStage={currentStage} />
       </div>
     </section>

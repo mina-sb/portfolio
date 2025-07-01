@@ -99,7 +99,7 @@ body:has(.card[data-color='green']:hover) {
     @apply mt-3 flex flex-col justify-start items-start lg:flex-row lg:items-end lg:justify-between gap-3 text-slate-200;
   }
   .about-skills-container {
-    @apply mt-6 flex flex-wrap gap-12 lg:justify-between;
+    @apply mt-6 flex flex-wrap gap-7 sm:gap-8 lg:gap-12 justify-start lg:justify-between;
   }
   .about-skill {
     @apply block-container w-20 h-20;
@@ -114,7 +114,7 @@ body:has(.card[data-color='green']:hover) {
     @apply text-sm font-medium my-1 text-white text-center;
   }
   .projects-main-container {
-    @apply px-12 md:px-20 xl:px-36 mt-28;
+    @apply px-12 md:px-20 xl:px-48 mt-28;
   }
   .projects-container {
     @apply grid grid-cols-1 md:grid-cols-2 gap-8 mt-10;
@@ -172,22 +172,6 @@ body:has(.card[data-color='green']:hover) {
   }
 }
 
-.glassmorphism {
-  background: rgba(8, 116, 239, 0.07);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.logo {
-  border-radius: 8.889px;
-  background: #fff;
-  box-shadow:
-    0px 10px 35px -4px rgba(67, 83, 255, 0.15),
-    0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
-}
-
 .block-container {
   position: relative;
   transition: 250ms;
@@ -220,22 +204,6 @@ body:has(.card[data-color='green']:hover) {
   background: linear-gradient(135deg, #f7971e -20%, #ffd200 120%);
 }
 
-.block-container .btn-back-blue {
-  background: linear-gradient(135deg, #0061ff -20%, #60efff 120%);
-}
-
-.block-container .btn-back-orange {
-  background: linear-gradient(135deg, #ff0f7b -20%, #f89b29 120%);
-}
-
-.block-container .btn-back-pink {
-  background: linear-gradient(135deg, #e81cff -20%, #40c9ff 120%);
-}
-
-.block-container .btn-back-black {
-  background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);
-}
-
 .block-container .btn-front {
   position: absolute;
   inset: 0;
@@ -257,29 +225,4 @@ body:has(.card[data-color='green']:hover) {
 
 .block-container:hover > .btn-front {
   transform: translateZ(80px) translateY(-5px) rotateY(15deg);
-}
-
-/* Neo Brutalism */
-.neo-brutalism-blue {
-  background: #2b77e7;
-  position: relative;
-  border-radius: 10px;
-  border: #2b77e7;
-  box-shadow:
-    0.6vmin 0.6vmin #336cc1,
-    1vmin 1vmin #0092db,
-    1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db,
-    1vmin 0.65vmin #0092db;
-}
-
-.neo-brutalism-white {
-  background: #fff;
-  border: #fff;
-  box-shadow:
-    0.6vmin 0.6vmin #fff,
-    1vmin 1vmin #d2e4ff,
-    1vmin 1vmin #d2e4ff,
-    0.65vmin 1vmin #d2e4ff,
-    1vmin 0.65vmin #d2e4ff;
 }
